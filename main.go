@@ -27,7 +27,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Fprintf(os.Stderr, "Generating a %d bit %s key...\n", *size, *typ)
 	priv, pub, err := ci.GenerateKeyPair(atyp, *size)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
