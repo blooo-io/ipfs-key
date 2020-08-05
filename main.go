@@ -39,7 +39,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Fprintf(os.Stderr, "%s\n", pid.Pretty())
+	fmt.Fprintf(os.Stderr, "%s ", pid.Pretty())
 
 	data, err := priv.Bytes()
 	if err != nil {
