@@ -33,7 +33,6 @@ func main() {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
-	fmt.Fprintln(os.Stderr, "Success!")
 
 	pid, err := peer.IDFromPublicKey(pub)
 	if err != nil {
@@ -41,7 +40,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Fprintf(os.Stderr, "ID for generated key: %s\n", pid.Pretty())
+	fmt.Fprintf(os.Stderr, pid.Pretty())
 
 	data, err := priv.Bytes()
 	if err != nil {
